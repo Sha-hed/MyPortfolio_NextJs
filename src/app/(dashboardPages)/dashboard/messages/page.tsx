@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 
 const DashboardMessages = async () => {
   
-    const res = await fetch("http://localhost:3000/api/message");
+    const res = await fetch("http://localhost:3000/api/message",{
+      cache: 'no-store'
+    });
     const data = await res.json();
     const messages = data.data;
 

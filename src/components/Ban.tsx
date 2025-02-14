@@ -1,14 +1,9 @@
-// import SS from '../assets/images/Shahed.jpg'
+
 "use client";
 import { TypeAnimation } from "react-type-animation";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 
 import { IoMdDownload } from "react-icons/io";
-
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-
 import facebook from "../assets/SocioIcons/facebook.svg";
 import instagram from "../assets/SocioIcons/instagram.svg";
 import linkedin from "../assets/SocioIcons/linkedin.svg";
@@ -19,18 +14,9 @@ import Image from "next/image";
 import Link from "next/link";
 //import { useEffect, useState } from "react";
 
-const BannerPage = () => {
+const Ban= () => {
 
   const handleDownloadResume = () => {
-    // if (isClient) {
-    //   const pdfUrl = "/Shahed_Resume.pdf"; 
-    //   const link = document.createElement("a");
-    //   link.href = pdfUrl;
-    //   link.download = "Shahed_Resume.pdf"; 
-    //   document.body.appendChild(link);
-    //   link.click();
-    //   document.body.removeChild(link);
-    // }
     console.log("Download Resume");
   };
 
@@ -40,6 +26,8 @@ const BannerPage = () => {
         {/* Banner Details */}
         <div className="w-full md:w-[60%] font-bold flex flex-col space-y-3">
           <h1 className="text-2xl md:text-4xl">Hi, I am</h1>
+          {/* <h1 className="text-2xl md:text-4xl">Kazi Mohammad Shahed</h1>
+          <h1 className="text-2xl md:text-4xl">I am a Junior MERN Stack Developer</h1> */}
           <TypeAnimation
             sequence={["Kazi Mohammad Shahed", 1000]}
             speed={75}
@@ -118,4 +106,4 @@ const BannerPage = () => {
   );
 };
 
-export default BannerPage;
+export default Ban;

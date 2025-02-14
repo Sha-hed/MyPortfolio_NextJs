@@ -1,28 +1,23 @@
-// import Image from "next/image";
 
+import Ban from "@/components/Ban";
 import BannerPage from "@/components/Banner";
-import Skills from "@/components/Skills";
-//import BlogPage from "./blog/page";
-//import ProjectPage from "./project/page";
-import BlogFile from "@/components/BlogFile";
+import Blog from "@/components/Blog";
 import ProjectFile from "@/components/ProjectFile";
+import Skill from "@/components/Skill";
+import type { Metadata } from "next";
 
-// import Navbar from "@/components/Navbar";
-
-import type { Metadata } from 'next'
- 
 export const metadata: Metadata = {
-  title: 'My Portfolio | Home',
-  description: '...',
-}
+  title: "My Portfolio | Home",
+  description: "...",
+};
 
 export default function Home() {
   return (
-    <div className="">
-      <BannerPage />
-      <Skills />
+    <div>
+      <Ban/>
+      <Skill/>
       <ProjectFile />
-      <BlogFile />
+      <Blog/>
     </div>
   );
 }
