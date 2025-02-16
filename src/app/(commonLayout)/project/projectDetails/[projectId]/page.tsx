@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
-const ProjectDetails = async ({ params }:any) => {
+const ProjectDetails = async ({ params }: any) => {
   const { projectId } = await params;
-  const res = await fetch(`http://localhost:3000/api/project/${projectId}`,{
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://shahed-portfolio-navy.vercel.app/api/project/${projectId}`,
+    {
+      cache: "no-store",
+    }
+  );
   const data = await res.json();
   const project = data?.data;
 
@@ -29,7 +31,13 @@ const ProjectDetails = async ({ params }:any) => {
       </h1>
       <div className="flex flex-col md:flex-row gap-5 p-5 items-center">
         <div className="w-full md:w-1/2">
-          <Image className="border border-gray-900" src={project.image} alt="" width={600} height={600}></Image>
+          <Image
+            className="border border-gray-900"
+            src={project.image}
+            alt=""
+            width={600}
+            height={600}
+          ></Image>
         </div>
         <div className="w-full md:w-1/2 flex flex-col space-y-5">
           <h1 className="text-3xl font-bold">

@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,7 +28,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-12 py-24 max-w-6xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-12 py-24 max-w-6xl mx-auto px-5">
       <div>
         <Image
           src={loginPhoto}

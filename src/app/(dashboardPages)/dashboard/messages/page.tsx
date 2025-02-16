@@ -4,20 +4,20 @@ import Image from "next/image";
 import React from "react";
 import { MdOutlineDelete } from "react-icons/md";
 
-
 export const metadata: Metadata = {
-  title: 'My Portfolio | Dashboard',
-  description: '...',
-}
+  title: "My Portfolio | Dashboard",
+  description: "...",
+};
 
 const DashboardMessages = async () => {
-  
-    const res = await fetch("http://localhost:3000/api/message",{
-      cache: 'no-store'
-    });
-    const data = await res.json();
-    const messages = data.data;
-
+  const res = await fetch(
+    "https://shahed-portfolio-navy.vercel.app/api/message",
+    {
+      cache: "no-store",
+    }
+  );
+  const data = await res.json();
+  const messages = data.data;
 
   return (
     <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800 my-10">
@@ -36,7 +36,7 @@ const DashboardMessages = async () => {
             </tr>
           </thead>
           <tbody className="border-b dark:bg-gray-50 dark:border-gray-300 text-center">
-            {messages?.map((message : any, id : any) => (
+            {messages?.map((message: any, id: any) => (
               <tr className="border font-semibold" key={message._id}>
                 <td className="py-5">{id + 1}</td>
                 <td>{message.name}</td>

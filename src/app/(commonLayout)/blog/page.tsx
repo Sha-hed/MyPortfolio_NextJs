@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 const BlogPage = async () => {
-  const res = await fetch("http://localhost:3000/api/blog",{
-    cache: "no-store"
+  const res = await fetch("https://shahed-portfolio-navy.vercel.app/api/blog", {
+    cache: "no-store",
   });
   const data = await res.json();
   const blogs = data.data;

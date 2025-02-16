@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { FieldValues } from "react-hook-form";
 import Swal from "sweetalert2";
 const ContactForm = () => {
-  const router = useRouter()
+  const router = useRouter();
   const sendEmail = async (e: FieldValues) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -15,17 +15,20 @@ const ContactForm = () => {
     const messages = { name, email, message };
     console.log(messages);
     e.target.reset();
-    const res = await fetch("http://localhost:3000/api/message", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(messages),
-    });
+    const res = await fetch(
+      "https://shahed-portfolio-navy.vercel.app/api/message",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(messages),
+      }
+    );
 
-    if(res.status === 200){
-      Swal.fire('Message Delivered Successfully!')
-      e.target.reset()
+    if (res.status === 200) {
+      Swal.fire("Message Delivered Successfully!");
+      e.target.reset();
     }
   };
   return (

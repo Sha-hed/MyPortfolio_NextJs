@@ -5,10 +5,10 @@ import { FieldValues } from "react-hook-form";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
-const UpdateProjectForm = ({ project }:any) => {
-  const router = useRouter()
+const UpdateProjectForm = ({ project }: any) => {
+  const router = useRouter();
   const id = project._id;
-  const handleSubmit = async (e:FieldValues) => {
+  const handleSubmit = async (e: FieldValues) => {
     e.preventDefault();
     const title = e.target.title.value;
     const liveLink = e.target.liveLink.value;
@@ -38,16 +38,19 @@ const UpdateProjectForm = ({ project }:any) => {
       description,
       image: uploadedFileUrl.url,
     };
-    const projectRes = await fetch(`http://localhost:3000/api/project/${id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/type",
-      },
-      body: JSON.stringify(project),
-    });
+    const projectRes = await fetch(
+      `https://shahed-portfolio-navy.vercel.app/api/project/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/type",
+        },
+        body: JSON.stringify(project),
+      }
+    );
     if (projectRes.status === 200) {
       toast.success("Project Updated Successfully!!");
-      router.push('/dashboard/projects')
+      router.push("/dashboard/projects");
     }
     console.log(projectRes);
     e.target.reset();

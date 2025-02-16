@@ -1,10 +1,9 @@
-
 import Link from "next/link";
 import BlogCard from "./BlogCard";
 
 const Blog = async () => {
-  const res = await fetch("http://localhost:3000/api/blog",{
-    cache:  "no-store"
+  const res = await fetch("https://shahed-portfolio-navy.vercel.app/api/blog", {
+    cache: "no-store",
   });
   const data = await res.json();
   const blogs = data.data;

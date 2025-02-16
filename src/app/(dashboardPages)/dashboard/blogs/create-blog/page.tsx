@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const CreateBlog = () => {
   const router = useRouter();
-  const handleSubmit = async (e:FieldValues) => {
+  const handleSubmit = async (e: FieldValues) => {
     e.preventDefault();
     const title = e.target.title.value;
     const category = e.target.category.value;
@@ -27,13 +27,16 @@ const CreateBlog = () => {
       description,
       image: uploadedFileUrl.url,
     };
-    const blogRes = await fetch("http://localhost:3000/api/blog", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(blog),
-    });
+    const blogRes = await fetch(
+      "https://shahed-portfolio-navy.vercel.app/api/blog",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(blog),
+      }
+    );
     if (blogRes.status === 200) {
       toast.success("Blog Added Successfully!");
       router.push("/dashboard/blogs");

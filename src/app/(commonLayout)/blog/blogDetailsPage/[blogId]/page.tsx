@@ -1,12 +1,15 @@
 import Image from "next/image";
 import { TiTickOutline } from "react-icons/ti";
 
-const BlogDetails = async ({ params } : any) => {
+const BlogDetails = async ({ params }: any) => {
   const { blogId } = await params;
 
-  const res = await fetch(`http://localhost:3000/api/blog/${blogId}`,{
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://shahed-portfolio-navy.vercel.app/api/blog/${blogId}`,
+    {
+      cache: "no-store",
+    }
+  );
   const blog = await res.json();
   const { image, title, description, category } = blog.data;
 

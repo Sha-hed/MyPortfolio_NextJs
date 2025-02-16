@@ -17,7 +17,7 @@ const HandleDeleteBlog = ({ blogId }: { blogId: string }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(
-          `http://localhost:3000/api/blog/${blogId}`,
+          `https://shahed-portfolio-navy.vercel.app/api/blog/${blogId}`,
           {
             method: "DELETE",
           }

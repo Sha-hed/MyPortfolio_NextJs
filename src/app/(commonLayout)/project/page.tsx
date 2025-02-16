@@ -2,20 +2,22 @@ import { GetAllProject } from "@/components/GetData";
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
 
-import type { Metadata } from 'next'
- 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: 'My Portfolio | Project',
-  description: '...',
-}
+  title: "My Portfolio | Project",
+  description: "...",
+};
 
 const ProjectPage = async () => {
-
-    const res = await fetch("http://localhost:3000/api/project",{
+  const res = await fetch(
+    "https://shahed-portfolio-navy.vercel.app/api/project",
+    {
       cache: "no-store",
-    });
-    const data = await res.json();
-    const projects = data.data; 
+    }
+  );
+  const data = await res.json();
+  const projects = data.data;
   // const p1 = projects[0]?.technology;
   // p1?.map((p)=>console.log('Tech ',p))
   // console.log(p1);

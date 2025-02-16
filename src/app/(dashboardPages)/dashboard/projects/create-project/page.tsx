@@ -30,13 +30,16 @@ const handleSubmit = async (e: FieldValues) => {
     description,
     image: uploadedFileUrl.url,
   };
-  const projectRes = await fetch("http://localhost:3000/api/project", {
-    method: "POST",
-    headers: {
-      "content-type": "application/type",
-    },
-    body: JSON.stringify(project),
-  });
+  const projectRes = await fetch(
+    "https://shahed-portfolio-navy.vercel.app/api/project",
+    {
+      method: "POST",
+      headers: {
+        "content-type": "application/type",
+      },
+      body: JSON.stringify(project),
+    }
+  );
   if (projectRes.status === 200) {
     toast.success("Project Added Successfully!!");
   }
@@ -47,7 +50,9 @@ const handleSubmit = async (e: FieldValues) => {
 const CreatePage = () => {
   return (
     <div className="w-full md:max-w-4xl p-5 mx-auto my-10 text-black">
-      <h1 className="text-center font-bold text-3xl underline dark:text-white text-black">Add Project</h1>
+      <h1 className="text-center font-bold text-3xl underline dark:text-white text-black">
+        Add Project
+      </h1>
       <div className="text-white uppercase font-bold mt-10 border p-2 md:p-10 rounded-xl shadow-xl dark:shadow-none dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
         <form
           onSubmit={handleSubmit}

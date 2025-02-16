@@ -6,10 +6,9 @@ import Swal from "sweetalert2";
 
 const HandleEditDeleteProject = ({ projectId }: { projectId: string }) => {
   const handleDelete = async () => {
-
     // console.log("Deleting project:", projectId);
     // Swal.fire("Deleted!", "Your project has been deleted.", "success");
-    
+
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -21,7 +20,7 @@ const HandleEditDeleteProject = ({ projectId }: { projectId: string }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(
-          `http://localhost:3000/api/project/${projectId}`,
+          `https://shahed-portfolio-navy.vercel.app/api/project/${projectId}`,
           {
             method: "DELETE",
           }
@@ -40,10 +39,12 @@ const HandleEditDeleteProject = ({ projectId }: { projectId: string }) => {
     });
   };
 
- 
   return (
     <div className="flex items-center">
-      <Link href={`/dashboard/projects/updateproject/${projectId}`} className="">
+      <Link
+        href={`/dashboard/projects/updateproject/${projectId}`}
+        className=""
+      >
         <FaRegEdit className="text-green-800 text-xl" />
       </Link>
       <button onClick={handleDelete}>

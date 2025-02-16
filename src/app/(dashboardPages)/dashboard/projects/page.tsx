@@ -12,9 +12,12 @@ export const metadata: Metadata = {
 };
 
 const DashboardProjects = async () => {
-  const res = await fetch("http://localhost:3000/api/project",{
-    cache: 'no-store'
-  });
+  const res = await fetch(
+    "https://shahed-portfolio-navy.vercel.app/api/project",
+    {
+      cache: "no-store",
+    }
+  );
   const data = await res.json();
   const projects = data.data;
 
