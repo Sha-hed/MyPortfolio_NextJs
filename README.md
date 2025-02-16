@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Hi 👋, I'm Kazi Mohammad Shahed
+I'm a Junior Frontend Developer with a deep passion for software development and a strong drive for solving complex problems. Currently pursuing a B.Sc. in Computer Science and Engineering (CSE) at Sylhet Engineering College, I am always eager to explore emerging technologies and refine my skills.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I am particularly fascinated by the intricacies of enterprise-level web application development and dedicated to building robust, scalable, and user-friendly solutions. My current focus is on mastering React and Next.js, diving deep into modern frontend development to create seamless and efficient web experiences.
 
-Open [https://shahed-portfolio-navy.vercel.app](https://shahed-portfolio-navy.vercel.app) with your browser to see the result.
+Let’s connect and build something amazing! 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+1. **CRUD Operations:** Implemented Create, Read, Update, and Delete functionality for blogs and projects.
+2. **Contact Page:** Allows users to share suggestions and feedback.
+3. **Blog Page:** Enables users to browse and read blog posts.
+4. **Project Page:** Showcases all projects with live previews and links to client-side and server-side repositories.
+5. **TypeScript Integration:** Ensures type safety, scalability, and maintainability.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **NextJS:** Used for the frontend and handling API requests/
+3. **MongoDB:** NoSQL database for storing product and order data.
+4. **Mongoose:** ODM library for schema-based data modeling.
+5. **TypeScript:** Type-safe JavaScript for better development experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For any inquiries or suggestions, feel free to reach out:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  - **Name:**    Kazi Mohammad Shahed
+  - **Email:**   shahedcse14@gmail.com
+  - **GitHub:**  Sha-Hed
